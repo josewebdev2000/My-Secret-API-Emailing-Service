@@ -5,3 +5,5 @@ import os
 
 USERNAME = os.environ["APP_USERNAME"]
 PASSWORD = os.environ["APP_PASSWORD"]
+EMAIL_REGEX = r"^[\w\.-]+@[\w\.-]+\.\w+$"
+REQUIRED_INFO = ("sender", "to", "subject", "content", "message_type")
