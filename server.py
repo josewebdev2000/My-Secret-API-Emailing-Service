@@ -63,10 +63,11 @@ def send_html_email():
     feedback = {"message": ""}
     
     # Unpack required information to send email
-    email_sender = email_info["sender"]
-    email_to = email_info["to"]
-    email_subject = email_info["subject"]
-    email_content = email_config.make_html_template(html_string = email_info["content"])
+    email_sender = email_info.get("sender", "")
+    email_to = email_info.get("to", "")
+    email_subject = email_info.get("subject", "")
+    email_sub_vars = email_info.get("sub_vars", {})
+    email_content = email_config.make_html_template(html_string = email_info.get("content", ""), sub_vars=email_sub_vars)
     email_message_type = "html"
     
     
