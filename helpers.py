@@ -26,7 +26,7 @@ def get_urls_from_file(url_filename):
             
             if ":" in line:
             
-                _, url = line.split(":")
+                _, url = line.split(": ")
                 url = url.strip()
                 urls.append(url)
     
@@ -62,6 +62,6 @@ def read_res_from_url(response):
         return json_res
     
     else:
-        return f"HTTP Error: received status code is: {response.status_code}"
+        return {"message":f"HTTP Error: received status code is: {response.status_code}"}
     
     

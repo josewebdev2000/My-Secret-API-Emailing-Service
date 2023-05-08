@@ -21,8 +21,12 @@ def make_html_template(html_string = "", sub_vars = {}):
     # Substitute HTML placeholders by their actual values if there is any
     if sub_vars:
         # Make HTML template
-        html_content = Template(html_string)
-        html_content = html_content.substitute(sub_vars)
+        try:
+            html_content = Template(html_string)
+            html_content = html_content.substitute(sub_vars)
+        
+        except Exception as e:
+            raise e
     
     else:
         html_content = html_string
