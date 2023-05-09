@@ -141,6 +141,14 @@
     "feedback": "{invalid_email} is not a valid email."
 }</code></p>
 
+<h5>Mispelling Error Message</h5>
+<p>This message is received when the given JSON substitution variables do not match the substitution placeholders found in the HTML string.</p>
+
+<code>{
+    "feedback": "Mispelling error in JSON given placeholder: {detailed_error_message}"
+}</code></p>
+
+
 <h5>General Email Configuration Error Message</h5>
 <p>This message is received when any other error occurred that stopped the configuration of the email to be sent.</p>
 <code>{
