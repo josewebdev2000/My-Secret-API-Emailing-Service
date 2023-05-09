@@ -27,15 +27,26 @@
 <div>
 <p>These two endpoints receive a <code>JSON</code> object through a <code>POST</code> request</p>
 
-<p>The structure of the JSON object for plain emails and HTML emails without substitution variables is:</p>
+<p>The structure of the JSON object for plain emails and HTML emails without substitution placeholders is:</p>
 
-<p><code>
-{
+<p>
+<code>{
     "api_key" : "Required API Key to use this service", 
     "sender"  : "name of entity who sends the email",
     "to"      : "email address of the receiver",
     "subject" : "email subject",
     "content" : "email body that contains the main message"
-}
-</code></p>
+}</code></p>
+<p>The structure of the JSON object for HTML emails with substitution placeholders is:</p>
+<p><code>{
+    "api_key" : "Required API Key to use this service", 
+    "sender"  : "name of entity who sends the email",
+    "to"      : "email address of the receiver",
+    "subject" : "email subject",
+    "content" : "email body that contains the main message",
+    "sub_vars": {
+        "name_var1" : "Value for substitution variable 1",
+        "name_var2" : "Value for substitution variable 2"
+    }
+}</code></p>
 </div>
