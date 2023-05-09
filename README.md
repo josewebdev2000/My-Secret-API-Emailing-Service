@@ -170,7 +170,7 @@
 <p>All emails will be send from this email address.</p>
 
 <h5>APP_PASSWORD</h5>
-<p>This environment variable refers to the password of the email address used to login to the SMPT server.</p>
+<p>This environment variable refers to the password of the email address used to login to the SMTP server.</p>
 
 </div>
 </div>
