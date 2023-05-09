@@ -14,6 +14,50 @@
 <p>Moreover, This API allows you to send dynamic HTML data through the usage of substitution placeholders.</p>
 <p>This API is of private use. However, the source code is free and you can implement it for your own purposes.</p>
 
+## Installation and Execution
+
+1. ### Install dependencies
+   
+   ###### Windows
+
+   ```powershell
+      pip install -r requirements.txt
+   ```
+   ###### Linux/MacOs
+
+   ```bash
+      pip3 install -r requirements.txt
+   ```
+
+2. ### Set up requried environment variables
+   
+   ###### Windows
+
+    ```powershell
+      set FLASK_APP=server.py
+      set FLASK_DEBUG=True
+      set API_KEY_FILE="<your_api_key_file>"
+      set APP_USERNAME="<your_app_username>"
+      set APP_PASSWORD="<your_app_password>"
+   ```
+   ###### Linux/MacOs
+
+   ```bash
+      export FLASK_APP=server.py
+      export FLASK_DEBUG=True
+      export API_KEY_FILE="<your_api_key_file>"
+      export APP_USERNAME="<your_app_username>"
+      export APP_PASSWORD="<your_app_password>"
+   ```
+
+3. ### Run the API locally on your machine
+   
+   ###### Windows/Linux/MacOs
+
+   ```powershell
+      flask run
+   ```
+
 ## Explanation
 
 <div>
@@ -127,24 +171,6 @@
 
 <h5>APP_PASSWORD</h5>
 <p>This environment variable refers to the password of the email address used to login to the SMPT server.</p>
-
-<p>If you want to set environment variables, open your terminal and execute the following command:</p>
-
-<h6>Windows</h6>
-
-```powershell
-   set API_KEY_FILE="<your_api_key_file>"
-   set APP_USERNAME="<your_app_username>"
-   set APP_PASSWORD="<your_app_password>"
-```
-
-<h6>Linux/MacOs</h6>
-
-```bash
-   export API_KEY_FILE="<your_api_key_file>"
-   export APP_USERNAME="<your_app_username>"
-   export APP_PASSWORD="<your_app_password>"
-```
 
 </div>
 </div>
