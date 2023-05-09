@@ -97,7 +97,7 @@
     "feedback": "Unexpected email configuration error. Make sure you provided the required information to send your email."
 }</code></p>
 
-<h5>Email Sending Error</h5>
+<h5>General Email Sending Error</h5>
 <p>This message is received when an error occurred while trying to send the email.</p>
 <code>{
     "feedback": "Unexpected email sending error. Try again later."
@@ -111,6 +111,41 @@
 <p>Unfortunately, the last two error messages reveal problems that are hard to debug and would need you to review and change the source code thoroughly.</p>
 
 <p>Fortunately, all the other messages regard the JSON object the API receives. Hence, if there is an error with those, just change the data you're providing in the JSON object until you receive a success message.</p>
+</div>
+
+<div>
+<h3>Environment Variables</h3>
+
+<p>This project requires the following environment variables to work properly</p>
+
+<h5>API_KEY_FILE</h5>
+<p>This environment variable contains the path to the file that the real API Key to test against the one provided by the user.</p>
+
+<h5>APP_USERNAME</h5>
+<p>This environment variable refers to the email address used to login to the SMTP server.</p>
+<p>All emails will be send from this email address.</p>
+
+<h5>APP_PASSWORD</h5>
+<p>This environment variable refers to the password of the email address used to login to the SMPT server.</p>
+
+<p>If you want to set environment variables, open your terminal and execute the following command:</p>
+
+<h6>Windows</h6>
+
+```powershell
+   set API_KEY_FILE="<your_api_key_file>"
+   set APP_USERNAME="<your_app_username>"
+   set APP_PASSWORD="<your_app_password>"
+```
+
+<h6>Linux/MacOs</h6>
+
+```bash
+   export API_KEY_FILE="<your_api_key_file>"
+   export APP_USERNAME="<your_app_username>"
+   export APP_PASSWORD="<your_app_password>"
+```
+
 </div>
 </div>
 
