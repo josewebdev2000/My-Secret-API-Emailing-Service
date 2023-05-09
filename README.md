@@ -56,10 +56,11 @@
 <p>Let's suppose you want to send a reset password page to users of your app.</p>
 <p>As always, you want to include the username of the user who forgot his/her password.</p>
 <p>In the HTML file, use the following syntax to introduce a substitution placeholder.</p>
-<p>
-<code><h2>Hello ${username}</h2> 
-<p>Click the following link to reset your password <a href="link-to-password-reset">Reset Password</a></p></code></p>
 
+```html
+<h2>Hello ${username}</h2> 
+Click the following link to reset your password <a href="link-to-password-reset">Reset Password</a></p>
+```
 <p>Then, use the following JSON object to inlcude the username in the HTML email</p>
 <p><code>{
     "api_key" : "Required API Key to use this service", 
