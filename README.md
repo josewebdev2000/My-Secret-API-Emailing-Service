@@ -16,7 +16,13 @@
 
 ## Installation and Execution
 
-1. ### Install dependencies
+1. ### Clone this repository
+   
+   ```bash
+   git clone https://github.com/josewebdev2000/My-Secret-API-Emailing-Service.git
+   ```
+
+2. ### Install dependencies
    
    ###### Windows
 
@@ -29,7 +35,7 @@
       pip3 install -r requirements.txt
    ```
 
-2. ### Set up requried environment variables
+3. ### Set up requried environment variables
    
    ###### Windows
 
@@ -50,7 +56,7 @@
       export APP_PASSWORD="<your_app_password>"
    ```
 
-3. ### Run the API locally on your machine
+4. ### Run the API locally on your machine
    
    ###### Windows/Linux/MacOs
 
