@@ -11,7 +11,7 @@
 ## Overview
 
 <p>This API sends plain text email messages and HTML email messages.</p>
-<p>Moreover, This API allows you to send dynamic HTML data through the usage of substitution placeholders</p>
+<p>Moreover, This API allows you to send dynamic HTML data through the usage of substitution placeholders.</p>
 <p>This API is of private use. However, the source code is free and you can implement it for your own purposes.</p>
 
 ## Explanation
@@ -66,6 +66,51 @@
 
 <div>
 <h4>Example Feedback Messages</h4>
+
+<h5>Success Message</h5>
+<p>This message is received only when the desired email could be sent.</p>
+<code>{
+    "feedback": "Your email was sent successfully to {email_address_of_receiver}"
+}</code></p>
+
+<h5>Invalid API Message</h5>
+<p>This message is received when no API key is specified or when the given API key was incorrect.</p>
+<code>{
+    "feedback": "Invalid API Key"
+}</code></p>
+
+<h5>Missing Key Information Error Message</h5>
+<p>This message is received when you forget to specify details such as email subject, email sender, etc.</p>
+<code>{
+    "feedback": "Cannot send email message without the following information: {information_not_specified}"
+}</code></p>
+
+<h5>Invalid Email Message</h5>
+<p>This message is received when the email specified in the "to" property is not a valid email.</p>
+<code>{
+    "feedback": "{invalid_email} is not a valid email."
+}</code></p>
+
+<h5>General Email Configuration Error Message</h5>
+<p>This message is received when any other error occurred that stopped the configuration of the email to be sent.</p>
+<code>{
+    "feedback": "Unexpected email configuration error. Make sure you provided the required information to send your email."
+}</code></p>
+
+<h5>Email Sending Error</h5>
+<p>This message is received when an error occurred while trying to send the email.</p>
+<code>{
+    "feedback": "Unexpected email sending error. Try again later."
+}</code></p>
+
+<h5>Personal notes on response messages from the API</h5>
+<p>It is highly unlikely to receive the last two error messages. However, there may be some scenarios where they could take place.</p>
+
+<p>For instance, you may get the Email Sending Error if your authentication details for the SMTP server you're trying to use fail.</p>
+
+<p>Unfortunately, the last two error messages reveal problems that are hard to debug and would need you to review and change the source code thoroughly.</p>
+
+<p>Fortunately, all the other messages regard the JSON object the API receives. Hence, if there is an error with those, just change the data you're providing in the JSON object until you receive a success message.</p>
 </div>
 </div>
 
@@ -103,7 +148,8 @@
 
 <p>Then the user will receive an email like the following:</p>
 
+```html
 <h2>Hello, patrick4523</h2>
 <p>Click the following link to reset your password <a href="link-to-password-reset">Reset Password</a></p>
-
+```
 </div>

@@ -67,7 +67,7 @@ def send_plain_email():
                 email_config.send_email(email_to_send_obj)
             
             except Exception:
-                feedback["message"] = f"Unexpected email sending error. Try again later."
+                feedback["message"] = "Unexpected email sending error. Try again later."
             
             else:
                 feedback["message"] = f"Your email was sent successfully to {email_to}"
