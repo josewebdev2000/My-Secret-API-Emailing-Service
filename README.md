@@ -27,12 +27,12 @@
    ###### Windows
 
    ```powershell
-      pip install -r requirements.txt
+   pip install -r requirements.txt
    ```
    ###### Linux/MacOs
 
    ```bash
-      pip3 install -r requirements.txt
+   pip3 install -r requirements.txt
    ```
 
 3. ### Set up requried environment variables
@@ -40,20 +40,20 @@
    ###### Windows
 
     ```powershell
-      set FLASK_APP=server.py
-      set FLASK_DEBUG=True
-      set API_KEY_FILE="<your_api_key_file>"
-      set APP_USERNAME="<your_app_username>"
-      set APP_PASSWORD="<your_app_password>"
-   ```
+    set FLASK_APP=server.py
+    set FLASK_DEBUG=True
+    set API_KEY_FILE="<your_api_key_file>"
+    set APP_USERNAME="<your_app_username>"
+    set APP_PASSWORD="<your_app_password>"
+    ```
    ###### Linux/MacOs
 
    ```bash
-      export FLASK_APP=server.py
-      export FLASK_DEBUG=True
-      export API_KEY_FILE="<your_api_key_file>"
-      export APP_USERNAME="<your_app_username>"
-      export APP_PASSWORD="<your_app_password>"
+   export FLASK_APP=server.py
+   export FLASK_DEBUG=True
+   export API_KEY_FILE="<your_api_key_file>"
+   export APP_USERNAME="<your_app_username>"
+   export APP_PASSWORD="<your_app_password>"
    ```
 
 4. ### Run the API locally on your machine
@@ -61,7 +61,7 @@
    ###### Windows/Linux/MacOs
 
    ```powershell
-      flask run
+   flask run
    ```
 
 ## Explanation
